@@ -10,7 +10,7 @@ package Top100.LinkedLists;
 
 class SwapNodesInPairs {
 
-
+    //todo Append them on a list and then just check the previous or following value
     public static void main(String[] args) {
         for (int i = 0; i < 4; i++) {
             ListNode node = new ListNode();
@@ -22,18 +22,20 @@ class SwapNodesInPairs {
             swapPairs(node);
         }
     }
-    public static ListNode swapPairs(ListNode head) {
-        //Check if the number is even, since we are only swapping the pairs
-        //System.out.println(head.val);
-        if (head.val%2 != 0) {
-            int auxiliar = head.val;
-            head.val = head.next.val;
-            head.next.val = auxiliar;
+
+        public static ListNode swapPairs(ListNode head) {
+            if (head == null || head.next == null) {
+                return head;
+            }
+
+            // Store the next node for recursion
+            ListNode nextNode = head.next;
+
+            // Swap the current node and the next node
+            head.next = swapPairs(nextNode.next);
+            nextNode.next = head;
+
+            // Return the new head (nextNode becomes the head after swapping)
+            return nextNode;
         }
-        else {
-            head.val --;
-        }
-        System.out.println(head.val);
-        return head;
-    }
 }
