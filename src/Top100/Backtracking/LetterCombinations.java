@@ -25,64 +25,33 @@ public class LetterCombinations {
     }
 
     public List<String> letterCombinations(String digits) {
-
         ArrayList<String> combinations = new ArrayList<>();
 
-        //Need to check that there are only correct numbers
+        // Need to check that there are only correct numbers
         if (digits.isEmpty()) {
             System.out.println("Empty number");
-            return null;
+            return combinations;
         }
 
-        //for (int i = 0; i < digits.length(); i++) {
-            numberLetter(digits,0,combinations,0,"");
-        //}
+        numberLetter(digits, 0, combinations, "");
         return combinations;
     }
 
-    /*private char numberLetter (String number, int position, ArrayList combinations, int currentPosition) {
-        String currentNumber = String.valueOf(number.charAt(currentPosition));
-
-        //Current position is the position of the letter in the hashmap
-        //Position is the number selected
-
-        //Every time I have to call the following position and call the new method
-        //System.out.println(numbers.get(number).charAt(currentPosition).length());
-        if (position >= numbers.get(currentNumber).length()) {
-            if (currentPosition+1 >= number.length()) {
-                return ' ';
-            }
-            return numberLetter(number,0,combinations,currentPosition+1);
-        }
-        else {
-            combinations.add(numbers.get(currentNumber).charAt(position));
-            return numberLetter(number,position+1,combinations,currentPosition);
-        }
-    }*/
-
-    private ArrayList numberLetter (String number, int nDigit, ArrayList combinations, int nLetter, String text) {
-
-        //Final check
+    private void numberLetter(String number, int nDigit, ArrayList<String> combinations, String text) {
+        // Base case: If the current digit index is greater than or equal to the length of the number
         if (nDigit >= number.length()) {
-            //We get the last element of the Numbers, to check how many characters will have into the hashmap
-            //Later on we will end the function
-
-            if (nLetter >= numbers.get(String.valueOf(number.charAt(number.length()-1))).length()) {
-                return combinations;
-            }
-        } else {
-            //todo Verify to dont nothing empty if there's no info
-
-            //todo CHANGE NDIGIT NO NLETTER
+            // Add the final combination to the list
             combinations.add(text);
-            if (nLetter >= numbers.get(String.valueOf(number.charAt(nDigit))).length()) {
-                return numberLetter(number,0,combinations,nLetter+1,"");
+        } else {
+            // Get the corresponding letters for the current digit
+            String letters = numbers.get(String.valueOf(number.charAt(nDigit)));
+            // Recursively explore all combinations by appending each letter to the text
+            //Will check every number
+            for (int i = 0; i < letters.length(); i++) {
+                numberLetter(number, nDigit + 1, combinations, text + letters.charAt(i));
             }
-            text += numbers.get(String.valueOf(number.charAt(nDigit))).charAt(nLetter);
-
         }
-        return numberLetter(number,nDigit+1,combinations,nLetter,text+"");
-
-
     }
+
+
 }
