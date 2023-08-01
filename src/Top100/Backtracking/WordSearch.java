@@ -39,6 +39,7 @@ public class WordSearch {
         for (int i = 0; i < board.length; i++) {
             for (int j = 0; j < board[i].length; j++) {
                 System.out.println(board[i][j]);
+                //todo Recusivity comes here
             }
             //exist(board,word,currentWord,posX,i);
         }
