@@ -39,6 +39,13 @@ public class WordSearch {
         for (int i = 0; i < board.length; i++) {
             for (int j = 0; j < board[i].length; j++) {
                 System.out.println(board[i][j]);
+                if(posX == i && posY == j) {
+                    //Check if its the last of the row
+                    if (posX >= board.length) {
+                        //Check the other directions
+                        exist(board,word,currentWord,posX,i);
+                    }
+                }
                 //todo Recusivity comes here
             }
             //exist(board,word,currentWord,posX,i);
