@@ -10,45 +10,87 @@ public class WordSearch {
         char[][] board = {{'A', 'B', 'C', 'E'},
                 {'S', 'F', 'C', 'S'},
                 {'A', 'D', 'E', 'E'}};
-        exist(board,"Test","",0,0);
+        System.out.println(exist(board,"Test","",0,0));
     }
 
     public static boolean exist(char[][] board, String word, String currentWord, int posX, int posY) {
-        System.out.println(board[0]);
-        System.out.println(board.length);
 
         //Verificacio de les lletres
         if (board[posX][posY] == word.charAt(currentWord.length())) {
             currentWord += board[posX][posY];
+
+            boolean follow = false;
+            //Verify the following character
+
+            //We cant check if the character is on the edge
+            if (posY < board[posX].length) {
+                if (board[posX][posY+1] == word.charAt(currentWord.length())) {
+                    follow = true;
+                }
+                if (posY > 0) {
+                    if (board[posX][posY-1] == word.charAt(currentWord.length())) {
+                        follow = true;
+                    }
+                }
+
+            }
+            if (posX < board.length) {
+                if (board[posX+1][posY] == word.charAt(currentWord.length())) {
+                    follow = true;
+                }
+                if (posX > 0)
+                    if (board[posX-1][posY] == word.charAt(currentWord.length())) {
+                    follow = true;
+                }
+
+            }
+            if (follow == false) {
+                return false;
+            }
         }
+
+        //Delete wrong letter
+        if (currentWord.length() > 0) {
+            if (currentWord.charAt(currentWord.length()) != word.charAt(currentWord.length())) {
+                currentWord = currentWord.substring(0,currentWord.length()-1);
+            }
+        }
+
 
         //First verification, is the words matching
         if (word == currentWord) {
+            System.out.println(currentWord);
             return true;
         }
 
 
-        if (posY == board.length) {
-            if (posX == board[posY].length) {
+        if (posX == board.length) {
+            if (posY == board[posX].length) {
+                System.out.println(currentWord);
                 return false;
             }
         }
 
 
         //Anar recorrent, es necesita un current word, o equiparar si la lletra que estem revisant coincideix a la posicio x de la word
-        for (int i = 0; i < board.length; i++) {
-            for (int j = 0; j < board[i].length; j++) {
-                System.out.println(board[i][j]);
+        for (int i = posX; i < board.length; i++) {
+            for (int j = posY; j < board[i].length; j++) {
                 if(posX == i && posY == j) {
                     //Check if its the last of the row
-                    if (posX >= board.length) {
+                    if (posX < board.length && posY < board[posX].length -1) {
                         //Check the other directions
-                        exist(board,word,currentWord,posX,i);
+                        exist(board,word,currentWord,posX,j+1);
+                    }
+                    else {
+                        if (posX < board.length -1) {
+                            exist(board,word,currentWord,i+1,0);
+                        }
                     }
                 }
                 //todo Recusivity comes here
             }
             //exist(board,word,currentWord,posX,i);
+
         }
         return true;
     }
