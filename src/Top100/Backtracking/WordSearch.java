@@ -10,66 +10,73 @@ public class WordSearch {
         char[][] board = {{'A', 'B', 'C', 'E'},
                 {'S', 'F', 'C', 'S'},
                 {'A', 'D', 'E', 'E'}};
-        System.out.println(exist(board,"Test","",0,0));
+        System.out.println(exist(board,"A","",0,0));
     }
 
     public static boolean exist(char[][] board, String word, String currentWord, int posX, int posY) {
 
         //Verificacio de les lletres
-        if (board[posX][posY] == word.charAt(currentWord.length())) {
+        if (currentWord.length() >= 0) {
+            if (board[posX][posY] == word.charAt(0)) {
+                currentWord += board[posX][posY];
+            }
+
+            else if (board[posX][posY] == word.charAt(currentWord.length()-1)) {
             currentWord += board[posX][posY];
+            }
 
             boolean follow = false;
             //Verify the following character
 
             //We cant check if the character is on the edge
-            if (posY < board[posX].length) {
-                if (board[posX][posY+1] == word.charAt(currentWord.length())) {
+
+            if (posY < board[posX].length-1) {
+                if (board[posX][posY+1] == word.charAt(currentWord.length()-1)) {
                     follow = true;
                 }
                 if (posY > 0) {
-                    if (board[posX][posY-1] == word.charAt(currentWord.length())) {
+                    if (board[posX][posY-1] == word.charAt(currentWord.length()-1)) {
                         follow = true;
                     }
                 }
 
             }
-            if (posX < board.length) {
-                if (board[posX+1][posY] == word.charAt(currentWord.length())) {
+            if (posX < board.length-1) {
+                if (board[posX+1][posY] == word.charAt(currentWord.length()-1)) {
                     follow = true;
                 }
                 if (posX > 0)
-                    if (board[posX-1][posY] == word.charAt(currentWord.length())) {
+                    if (board[posX-1][posY] == word.charAt(currentWord.length()-1)) {
                     follow = true;
                 }
 
             }
             if (follow == false) {
-                return false;
+
+                //First verification, is the words matching
+                if (word == currentWord) {
+                    System.out.println(currentWord);
+                    return true;
+                }
+
+
+                if (posX == board.length) {
+                    if (posY == board[posX].length) {
+                        System.out.println(currentWord);
+                        return false;
+                    }
+                }
             }
         }
 
         //Delete wrong letter
         if (currentWord.length() > 0) {
-            if (currentWord.charAt(currentWord.length()) != word.charAt(currentWord.length())) {
+            if (currentWord.charAt(currentWord.length()-1) != word.charAt(currentWord.length()-1)) {
                 currentWord = currentWord.substring(0,currentWord.length()-1);
             }
         }
 
 
-        //First verification, is the words matching
-        if (word == currentWord) {
-            System.out.println(currentWord);
-            return true;
-        }
-
-
-        if (posX == board.length) {
-            if (posY == board[posX].length) {
-                System.out.println(currentWord);
-                return false;
-            }
-        }
 
 
         //Anar recorrent, es necesita un current word, o equiparar si la lletra que estem revisant coincideix a la posicio x de la word
@@ -92,7 +99,7 @@ public class WordSearch {
             //exist(board,word,currentWord,posX,i);
 
         }
-        return true;
+        return false;
     }
 
 
