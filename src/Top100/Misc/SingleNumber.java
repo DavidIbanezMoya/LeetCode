@@ -15,6 +15,7 @@ public class SingleNumber {
                 if (emptyNumber.get(j) == nums[i]) {
                     count++;
                 }
+
                 //If the number is repeated we will delete all of those
                 if (count > 1){
                     emptyNumber.removeAll(Collections.singleton(Integer.valueOf(emptyNumber.get(j))));
