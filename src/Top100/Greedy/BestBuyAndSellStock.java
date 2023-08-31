@@ -21,15 +21,12 @@ public class BestBuyAndSellStock {
             if (prices[i] < minPrize) {
                 minPrize = prices[i];
             }
-            //Calcular el profit actual
             else {
                 //Get the maxProfit
-                for (int j = i; j < prices.length; j++) {
-                    if (prices[j] - minPrize > maxProfit) {
-                        maxProfit = prices[j] - minPrize;
+                    if (prices[i] - minPrize > maxProfit) {
+                        maxProfit = prices[i] - minPrize;
                     }
                 }
-            }
 
         }
         System.out.println(minPrize);
