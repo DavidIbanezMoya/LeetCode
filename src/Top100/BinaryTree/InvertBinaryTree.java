@@ -12,36 +12,39 @@ public class InvertBinaryTree {
 
         InvertBinaryTree binaryTree = new InvertBinaryTree();
         int[] root = new int[] {4,2,7,1,3,6,9};
-        binaryTree.buildTree(root);
-        binaryTree.invertTree(new TreeNode());
+        TreeNode inverted = binaryTree.buildTree(root);
     }
 
     public TreeNode buildTree(int[] root) {
         //We will need to first create the tree
-        //todo Should I have a tree where to append all the others? We need a return statement
-        TreeNode tree = new TreeNode();
+        if (root == null) {
+            return null;
 
-
-        for (int i = 0; i < root.length; i++) {
-
-            //todo Pensar com haig de crear l arbre per a que el detecti, un cop creat sera canviar els nodes recursivament
-            if (i < 1) {
-                tree = new TreeNode(root[i]);
-            }
-            else if (i+1 < root.length) {
-                TreeNode newTree = new TreeNode(root[i]);
-                newTree.val = root[i];
-                newTree.left = new TreeNode(root[i-1]);
-                newTree.right = new TreeNode(root[i+1]);
-
-                tree.right = new TreeNode(newTree.val,newTree.left,newTree.right);
-            }
         }
-        return new TreeNode();
-    }
-    public ArrayList<Integer> invertTree (TreeNode root) {
+        TreeNode rootTreeNode = new TreeNode(root[0]);
+        TreeNode current = rootTreeNode;
 
-        return null;
+        for (int i = 1; i < root.length; i++) {
+            current.left = new TreeNode(root[i]);
+            current = current.left;
+        }
+
+        invertTree(rootTreeNode);
+        return rootTreeNode;
+    }
+    public void invertTree (TreeNode root) {
+
+        if (root == null) {
+            return;
+        }
+
+        TreeNode auxiliar = root.left;
+        root.left = root.right;
+        root.right = auxiliar;
+
+        invertTree(root.left);
+        invertTree(root.right);
+
     }
 }
 
