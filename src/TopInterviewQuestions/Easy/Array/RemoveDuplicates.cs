@@ -17,16 +17,21 @@ Return k.*/
     {
         public int RemoveDuplicatesSolution(int[] nums)
         {
-            int[] expectedNums = { 1, 3 }; // The expected answer with correct length
-
-            int k = RemoveDuplicatesSolution(nums); // Calls your implementation
-
-            //assert k == expectedNums.length;
-            /*for (int i = 0; i < k; i++)
+            List<int> numsList = new List<int>(nums);
+            
+            for (int i = 0; i < numsList.Count; i++)
             {
-                assert nums[i] == expectedNums[i];
-            }*/
-            return 0;
+                //Iterates over every number and checks if there is a duplicate in the next one
+                if (i+1 < numsList.Count) {
+                    if (numsList[i] == numsList[i+1])
+                    {
+                        numsList.RemoveAt(i);
+                    }
+            }
+            }
+            int[] array = numsList.ToArray();
+            
+            return array.Length;
         }
    
 

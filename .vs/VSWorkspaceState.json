@@ -3,9 +3,7 @@
     "",
     "\\src",
     "\\src\\Top100",
-    "\\src\\Top100\\Graph",
-    "\\src\\TopInterviewQuestions\\Easy"
+    "\\src\\Top100\\Graph"
   ],
-  "SelectedNode": "\\src\\Top100\\Graph\\Main.java",
   "PreviewInSolutionExplorer": false
 }
