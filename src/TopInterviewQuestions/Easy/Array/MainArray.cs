@@ -11,7 +11,7 @@ namespace LeetCode.src.TopInterviewQuestions.Easy.Array
         {
             //Remove Duplicates
             RemoveDuplicates removeDuplicates = new RemoveDuplicates();
-            removeDuplicates.RemoveDuplicatesSolution(new int[] { 0, 0, 1, 1, 1, 2, 2, 3, 3, 4 });
+            removeDuplicates.RemoveDuplicatesSolution(new int[] { 1,1,2});
 
             //Contains Duplicates
             ContainsDuplicate containsDuplicate = new ContainsDuplicate();

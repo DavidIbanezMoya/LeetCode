@@ -17,21 +17,23 @@ Return k.*/
     {
         public int RemoveDuplicatesSolution(int[] nums)
         {
-            List<int> numsList = new List<int>(nums);
-            
-            for (int i = 0; i < numsList.Count; i++)
+
+            //Cursor to iterate over the array
+            int slow = 0;
+
+            for (int fast = 1; fast < nums.Length; fast++)
             {
-                //Iterates over every number and checks if there is a duplicate in the next one
-                if (i+1 < numsList.Count) {
-                    if (numsList[i] == numsList[i+1])
-                    {
-                        numsList.RemoveAt(i);
-                    }
+                //When the number its not the same we can go to the next one
+                //as it will be ascendant ordered
+                if (nums[slow] != nums[fast])
+                {
+                    //We move the cursor so it takes to the position that is different
+                    slow++;
+                    nums[slow] = nums[fast];
+                }
+
             }
-            }
-            int[] array = numsList.ToArray();
-            
-            return array.Length;
+            return slow+1;
         }
    
 
