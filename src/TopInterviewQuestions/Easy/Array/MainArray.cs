@@ -19,7 +19,11 @@ namespace LeetCode.src.TopInterviewQuestions.Easy.Array
 
             //Buy and Sell Stock
             BuyAndSellStock buyAndSellStock = new BuyAndSellStock();
-            buyAndSellStock.MaxProfit(new int[] { 2, 1, 2, 0, 1 });
+            //buyAndSellStock.MaxProfit(new int[] { 2, 1, 2, 0, 1 });
+
+            //Rotate Array
+            RotateArray rotate = new RotateArray();
+            rotate.Rotate(new int[] {1},1);
         }
     }
 }
