@@ -435,9 +435,11 @@
     <Folder Include="src\TopInterviewQuestions\Easy\Trees\" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="src\TopInterviewQuestions\Easy\Array\BuyAndSellStock.cs" />
     <Compile Include="src\TopInterviewQuestions\Easy\Array\ContainsDuplicate.cs" />
     <Compile Include="src\TopInterviewQuestions\Easy\Array\MainArray.cs" />
     <Compile Include="src\TopInterviewQuestions\Easy\Array\RemoveDuplicates.cs" />
+    <Compile Include="src\TopInterviewQuestions\Easy\Array\RotateArray.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSHARP.Targets" />
   <ProjectExtensions>
