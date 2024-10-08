@@ -440,6 +440,7 @@
     <Compile Include="src\TopInterviewQuestions\Easy\Array\MainArray.cs" />
     <Compile Include="src\TopInterviewQuestions\Easy\Array\RemoveDuplicates.cs" />
     <Compile Include="src\TopInterviewQuestions\Easy\Array\RotateArray.cs" />
+    <Compile Include="src\TopInterviewQuestions\Easy\Array\ValidSudoku.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSHARP.Targets" />
   <ProjectExtensions>

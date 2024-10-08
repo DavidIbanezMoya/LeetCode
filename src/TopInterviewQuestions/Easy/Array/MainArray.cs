@@ -7,6 +7,8 @@ namespace LeetCode.src.TopInterviewQuestions.Easy.Array
 {
     class MainArray
     {
+
+
         public static void Main(string[] args)
         {
             //Remove Duplicates
@@ -23,7 +25,23 @@ namespace LeetCode.src.TopInterviewQuestions.Easy.Array
 
             //Rotate Array
             RotateArray rotate = new RotateArray();
-            rotate.Rotate(new int[] {1},1);
+            //rotate.Rotate(new int[] {1},1);
+
+            //Valid Sudoku
+            //Board for sudoku
+            char[][] board = new char[9][] {
+            new char[] { '5', '3', '.', '.', '7', '.', '.', '.', '.' },
+            new char[] { '6', '.', '.', '1', '9', '5', '.', '.', '.' },
+            new char[] { '.', '9', '8', '.', '.', '.', '.', '6', '.' },
+            new char[] { '8', '.', '.', '.', '6', '.', '.', '.', '3' },
+            new char[] { '4', '.', '.', '8', '.', '3', '.', '.', '1' },
+            new char[] { '7', '.', '.', '.', '2', '.', '.', '.', '6' },
+            new char[] { '.', '6', '.', '.', '.', '.', '2', '8', '.' },
+            new char[] { '.', '.', '.', '4', '1', '9', '.', '.', '5' },
+            new char[] { '.', '.', '.', '.', '8', '.', '.', '7', '9' }};
+
+            ValidSudoku sudoku = new ValidSudoku();
+            sudoku.IsValidSudoku(board);
         }
     }
 }
