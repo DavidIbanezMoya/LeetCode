@@ -9,7 +9,7 @@ namespace LeetCode.src.TopInterviewQuestions.Easy.Array
     {
 
 
-        public static void Main(string[] args)
+        /*public static void Main(string[] args)
         {
             //Remove Duplicates
             RemoveDuplicates removeDuplicates = new RemoveDuplicates();
@@ -30,7 +30,7 @@ namespace LeetCode.src.TopInterviewQuestions.Easy.Array
             //Valid Sudoku
             //Board for sudoku
             char[][] board = new char[9][] {
-            new char[] { '5', '3', '.', '.', '7', '.', '.', '.', '.' },
+            new char[] { '8', '3', '.', '.', '7', '.', '.', '.', '.' },
             new char[] { '6', '.', '.', '1', '9', '5', '.', '.', '.' },
             new char[] { '.', '9', '8', '.', '.', '.', '.', '6', '.' },
             new char[] { '8', '.', '.', '.', '6', '.', '.', '.', '3' },
@@ -42,6 +42,6 @@ namespace LeetCode.src.TopInterviewQuestions.Easy.Array
 
             ValidSudoku sudoku = new ValidSudoku();
             sudoku.IsValidSudoku(board);
-        }
+        }*/
     }
 }

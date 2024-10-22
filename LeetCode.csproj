@@ -431,7 +431,6 @@
     <Folder Include="src\TopInterviewQuestions\Easy\Math\" />
     <Folder Include="src\TopInterviewQuestions\Easy\Others\" />
     <Folder Include="src\TopInterviewQuestions\Easy\SortingAndSearching\" />
-    <Folder Include="src\TopInterviewQuestions\Easy\Strings\" />
     <Folder Include="src\TopInterviewQuestions\Easy\Trees\" />
   </ItemGroup>
   <ItemGroup>
@@ -441,6 +440,9 @@
     <Compile Include="src\TopInterviewQuestions\Easy\Array\RemoveDuplicates.cs" />
     <Compile Include="src\TopInterviewQuestions\Easy\Array\RotateArray.cs" />
     <Compile Include="src\TopInterviewQuestions\Easy\Array\ValidSudoku.cs" />
+    <Compile Include="src\TopInterviewQuestions\Easy\Strings\FirstUniqueChar.cs" />
+    <Compile Include="src\TopInterviewQuestions\Easy\Strings\MainString.cs" />
+    <Compile Include="src\TopInterviewQuestions\MainProgram.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSHARP.Targets" />
   <ProjectExtensions>

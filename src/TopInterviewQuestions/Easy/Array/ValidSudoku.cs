@@ -19,16 +19,16 @@ Only the filled cells need to be validated according to the mentioned rules.*/
         public bool IsValidSudoku(char[][] board)
         {
 
-            HashSet<Char> rNumber = new HashSet<char>();
-            rNumber.Add('1');
-            rNumber.Add('2');
-            rNumber.Add('3');
-            rNumber.Add('4');
-            rNumber.Add('5');
-            rNumber.Add('6');
-            rNumber.Add('7');
-            rNumber.Add('8');
-            rNumber.Add('9');
+            HashSet<Char> cNumber = new HashSet<char>();
+            cNumber.Add('1');
+            cNumber.Add('2');
+            cNumber.Add('3');
+            cNumber.Add('4');
+            cNumber.Add('5');
+            cNumber.Add('6');
+            cNumber.Add('7');
+            cNumber.Add('8');
+            cNumber.Add('9');
 
             //We have to check the different rules
 
@@ -36,36 +36,42 @@ Only the filled cells need to be validated according to the mentioned rules.*/
             //as intended as for now. Need to implement the rule of 3x3
             for (int i = 0; i < board.Length; i++)
             {
-                if (board[0][i] != '.' && !rNumber.Contains(board[0][i]))
+                if (board[i][0] != '.' && !cNumber.Contains(board[i][0]))
                 {
                     return false;
                 }
-                else if (rNumber.Contains(board[0][i]))
+                else if (cNumber.Contains(board[i][0]))
                 {
-                    rNumber.Remove(board[0][i]);
+                    cNumber.Remove(board[i][0]);
                 }
 
-                HashSet<Char> cNumber = new HashSet<char>();
-                cNumber.Add('1');
-                cNumber.Add('2');
-                cNumber.Add('3');
-                cNumber.Add('4');
-                cNumber.Add('5');
-                cNumber.Add('6');
-                cNumber.Add('7');
-                cNumber.Add('8');
-                cNumber.Add('9');
+                HashSet<Char> rNumber = new HashSet<char>();
+                rNumber.Add('1');
+                rNumber.Add('2');
+                rNumber.Add('3');
+                rNumber.Add('4');
+                rNumber.Add('5');
+                rNumber.Add('6');
+                rNumber.Add('7');
+                rNumber.Add('8');
+                rNumber.Add('9');
 
                 //Check that it is not repeated on the same column
                 for (int j = 0; j < board[i].Length; j++)
                 {
-                    if (board[i][j] != '.' && !cNumber.Contains(board[i][j]))
+                    if (board[i][j] != '.' && !rNumber.Contains(board[i][j]))
                     {
                         return false;
                     }
-                    else if (cNumber.Contains(board[i][j]))
+                    else if (rNumber.Contains(board[i][j]))
                     {
-                        cNumber.Remove(board[i][j]);
+                        rNumber.Remove(board[i][j]);
+                    }
+
+                    //Here we will check the 3x3
+                    if (i%3==0 && j%3==0)
+                    {
+                        HashSet<Char> grid = new HashSet<char>();
                     }
                 }
 
