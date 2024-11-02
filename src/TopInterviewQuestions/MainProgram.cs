@@ -1,4 +1,5 @@
-﻿using System;
+﻿using LeetCode.src.TopInterviewQuestions.Easy.Array;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -80,7 +81,7 @@ namespace LeetCode.src.TopInterviewQuestions
 
         private static void easyMenu ()
         {
-            //Check the loop, and decide how to manage it, be it with a general while loop or with diferent methods
+            //We create the loop within a method
             while (easyMenuFlag)
             {
                 string message = "\n\t1.Array\n\t2.Design\n\t3.Dynamic Programming\n\t4.Linked Lists\n\t5.Math\n\t6.Sorting and Searching\n\t7.Strings\n\t8.Trees\n\t9.Others\n\t10.Back to main menu";
@@ -158,6 +159,7 @@ namespace LeetCode.src.TopInterviewQuestions
             //Check the loop, and decide how to manage it, be it with a general while loop or with diferent methods
             while (easyMenuFlag)
             {
+
                 string message = "\n\t1.Buy and sell stock\n\t2.Contains Duplicate\n\t3.Remove Duplicate\n\t4.Rotate Array\n\t5.Valid Sudoku\n\t6.Single Number\n\t7.Intersection of Two Arrays II\n\t8.Plus One\n\t9.Move Zeroes\n\t10.Two Sum\n\t11.Rotate Image\n\t12.Back to Easy Menu";
                 Console.WriteLine(message);
                 Console.Write("\nOption ->");
@@ -168,23 +170,40 @@ namespace LeetCode.src.TopInterviewQuestions
                     //We should instantiate the class so we can go through the different Arrays methods
                     if (number == 1)
                     {
-
+                        BuyAndSellStock buyAndSellStock = new BuyAndSellStock();
+                        buyAndSellStock.MaxProfit(new int[] { 2, 1, 2, 0, 1 });
                     }
                     else if (number == 2)
                     {
-
+                        ContainsDuplicate containsDuplicate = new ContainsDuplicate();
+                        containsDuplicate.checkDuplicate(new int[] { 1, 2, 3 });
                     }
                     else if (number == 3)
                     {
-
+                        RemoveDuplicates removeDuplicates = new RemoveDuplicates();
+                        removeDuplicates.RemoveDuplicatesSolution(new int[] { 1,1,2});
                     }
                     else if (number == 4)
                     {
-
+                        RotateArray rotate = new RotateArray();
+                        rotate.Rotate(new int[] {1},1);
                     }
                     else if (number == 5)
                     {
+                        //Board for sudoku
+                        char[][] board = new char[9][] {
+                        new char[] { '8', '3', '.', '.', '7', '.', '.', '.', '.' },
+                        new char[] { '6', '.', '.', '1', '9', '5', '.', '.', '.' },
+                        new char[] { '.', '9', '8', '.', '.', '.', '.', '6', '.' },
+                        new char[] { '8', '.', '.', '.', '6', '.', '.', '.', '3' },
+                        new char[] { '4', '.', '.', '8', '.', '3', '.', '.', '1' },
+                        new char[] { '7', '.', '.', '.', '2', '.', '.', '.', '6' },
+                        new char[] { '.', '6', '.', '.', '.', '.', '2', '8', '.' },
+                        new char[] { '.', '.', '.', '4', '1', '9', '.', '.', '5' },
+                        new char[] { '.', '.', '.', '.', '8', '.', '.', '7', '9' }};
 
+                        ValidSudoku sudoku = new ValidSudoku();
+                        sudoku.IsValidSudoku(board);
                     }
                     else if (number == 6)
                     {
