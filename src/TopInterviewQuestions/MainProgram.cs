@@ -41,26 +41,45 @@ namespace LeetCode.src.TopInterviewQuestions
 
             while (mainMenuFlag)
             {
-                string message = "\n\t1.Easy\n\t2.Exit program\n";
+                string message = "\n\t1.Easy\n\t2.Normal\n\t3.Hard\n\t4.Exit program\n";
                 Console.WriteLine(message);
                 Console.Write("\nOption ->");
                 string userOption = Console.ReadLine().ToString();
                 int number = 0;
-                if (checkOption(userOption,1,2,out number) != false)
+                if (checkOption(userOption,1,4,out number) != false)
                 {
-                    mainMenuFlag = false;
                     if (number == 1)
                     {
                         Console.WriteLine("Entering Easy Menu");
                         easyMenuFlag = true;
-                    } else if (number == 2)
+                        easyMenu();
+                        
+                    }
+                    else if (number == 2)
                     {
+                        Console.WriteLine("Normal questions are not yet finished!");
+                    }
+                    else if (number == 3)
+                    {
+                        Console.WriteLine("Hard questions are not yet finished!");
+                    }
+                    else if (number == 4)
+                    {
+                        mainMenuFlag = false;
                         Console.WriteLine("See you soon!");
                         break;
                     }
                 }
             }
 
+
+
+
+
+        }
+
+        private static void easyMenu ()
+        {
             //Check the loop, and decide how to manage it, be it with a general while loop or with diferent methods
             while (easyMenuFlag)
             {
@@ -71,17 +90,134 @@ namespace LeetCode.src.TopInterviewQuestions
                 int number = 0;
                 if (checkOption(userOption, 1, 10, out number) != false)
                 {
-                    easyMenuFlag = false;
-                    if (number == 10)
+                    if (number == 1)
                     {
+                        eMenuArrayFlag = true;
+                        System.Console.WriteLine("Entering the Array menu");
+                        easyArrayMenu();
+                    } else if (number == 2)
+                    {
+                        eMenuDesignFlag = true;
+                        System.Console.WriteLine("Entering the Design menu");
+                        easyMenuFlag = false;
+                    }
+                    else if (number == 3)
+                    {
+                        eMenuDynamicProgrammingFlag = true;
+                        System.Console.WriteLine("Entering the Dynamic Programming menu");
+                        easyMenuFlag = false;
+                    }
+                    else if (number == 4)
+                    {
+                        eMenuLinkedListsFlag = true;
+                        System.Console.WriteLine("Entering the Linked Lists menu");
+                        easyMenuFlag = false;
+                    }
+                    else if (number == 5)
+                    {
+                        eMenuMathFlag = true;
+                        System.Console.WriteLine("Entering the Math menu");
+                        easyMenuFlag = false;
+                    }
+                    else if (number == 6)
+                    {
+                        eMenuSortingAndSearchingFlag = true;
+                        System.Console.WriteLine("Entering the Sorting and Searching menu");
+                        easyMenuFlag = false;
+                    }
+                    else if (number == 7)
+                    {
+                        eMenuStringFlag = true;
+                        System.Console.WriteLine("Entering the String menu");
+                        easyMenuFlag = false;
+                    }
+                    else if (number == 8)
+                    {
+                        eMenuTreesFlag = true;
+                        System.Console.WriteLine("Entering the Trees menu");
+                        easyMenuFlag = false;
+                    }
+                    else if (number == 9)
+                    {
+                        eMenuOthersFlag = true;
+                        System.Console.WriteLine("Entering the Others menu");
+                        easyMenuFlag = false;
+                    }
+                    else if (number == 10)
+                    {
+                        easyMenuFlag = false;
                         Console.WriteLine("Entering main menu");
                         mainMenuFlag = true;
                     }
                 }
             }
+        }
 
+        private static void easyArrayMenu()
+        {
+            //Check the loop, and decide how to manage it, be it with a general while loop or with diferent methods
+            while (easyMenuFlag)
+            {
+                string message = "\n\t1.Buy and sell stock\n\t2.Contains Duplicate\n\t3.Remove Duplicate\n\t4.Rotate Array\n\t5.Valid Sudoku\n\t6.Single Number\n\t7.Intersection of Two Arrays II\n\t8.Plus One\n\t9.Move Zeroes\n\t10.Two Sum\n\t11.Rotate Image\n\t12.Back to Easy Menu";
+                Console.WriteLine(message);
+                Console.Write("\nOption ->");
+                string userOption = Console.ReadLine().ToString();
+                int number = 0;
+                if (checkOption(userOption, 1, 10, out number) != false)
+                {
+                    //We should instantiate the class so we can go through the different Arrays methods
+                    if (number == 1)
+                    {
 
+                    }
+                    else if (number == 2)
+                    {
 
+                    }
+                    else if (number == 3)
+                    {
+
+                    }
+                    else if (number == 4)
+                    {
+
+                    }
+                    else if (number == 5)
+                    {
+
+                    }
+                    else if (number == 6)
+                    {
+
+                    }
+                    else if (number == 7)
+                    {
+
+                    }
+                    else if (number == 8)
+                    {
+
+                    }
+                    else if (number == 9)
+                    {
+
+                    }
+                    else if (number == 10)
+                    {
+
+                    }
+                    else if (number == 11)
+                    {
+
+                    }
+                    else if (number == 12)
+                    {
+                        eMenuArrayFlag = false;
+                        Console.WriteLine("Entering easy menu");
+                        easyMenuFlag = true;
+                    }
+                }
+            }
         }
 
         private static bool checkOption (string option,int minSelectable, int maxSelectable, out int number)

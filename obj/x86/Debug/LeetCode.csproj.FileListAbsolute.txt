@@ -4,3 +4,10 @@ D:\LeetCode\bin\Debug\ConsoleApplication.exe
 D:\LeetCode\bin\Debug\ConsoleApplication.pdb
 D:\LeetCode\obj\x86\Debug\ConsoleApplication.exe
 D:\LeetCode\obj\x86\Debug\ConsoleApplication.pdb
+C:\Users\David\Source\Repos\LeetCode\bin\Debug\ConsoleApplication.exe.config
+C:\Users\David\Source\Repos\LeetCode\bin\Debug\ConsoleApplication.exe
+C:\Users\David\Source\Repos\LeetCode\bin\Debug\ConsoleApplication.pdb
+C:\Users\David\Source\Repos\LeetCode\obj\x86\Debug\LeetCode.csproj.AssemblyReference.cache
+C:\Users\David\Source\Repos\LeetCode\obj\x86\Debug\LeetCode.csproj.CoreCompileInputs.cache
+C:\Users\David\Source\Repos\LeetCode\obj\x86\Debug\ConsoleApplication.exe
+C:\Users\David\Source\Repos\LeetCode\obj\x86\Debug\ConsoleApplication.pdb
