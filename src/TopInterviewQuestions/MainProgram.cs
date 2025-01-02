@@ -1,4 +1,5 @@
 ﻿using LeetCode.src.TopInterviewQuestions.Easy.Array;
+using LeetCode.src.TopInterviewQuestions.Easy.Strings;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -130,7 +131,7 @@ namespace LeetCode.src.TopInterviewQuestions
                     {
                         eMenuStringFlag = true;
                         System.Console.WriteLine("Entering the String menu");
-                        easyMenuFlag = false;
+                        easyStringMenu();
                     }
                     else if (number == 8)
                     {
@@ -157,15 +158,16 @@ namespace LeetCode.src.TopInterviewQuestions
         private static void easyArrayMenu()
         {
             //Check the loop, and decide how to manage it, be it with a general while loop or with diferent methods
-            while (easyMenuFlag)
+            while (eMenuArrayFlag)
             {
 
-                string message = "\n\t1.Buy and sell stock\n\t2.Contains Duplicate\n\t3.Remove Duplicate\n\t4.Rotate Array\n\t5.Valid Sudoku\n\t6.Single Number\n\t7.Intersection of Two Arrays II\n\t8.Plus One\n\t9.Move Zeroes\n\t10.Two Sum\n\t11.Rotate Image\n\t12.Back to Easy Menu";
+                string message = "\n\t1.Buy and sell stock\n\t2.Contains Duplicate\n\t3.Remove Duplicate\n\t4.Rotate Array\n\t5.Valid Sudoku\n\t6.Single Number\n" +
+                    "\t7.Intersection of Two Arrays II\n\t8.Plus One\n\t9.Move Zeroes\n\t10.Two Sum\n\t11.Rotate Image\n\t12.Back to Easy Menu";
                 Console.WriteLine(message);
                 Console.Write("\nOption ->");
                 string userOption = Console.ReadLine().ToString();
                 int number = 0;
-                if (checkOption(userOption, 1, 10, out number) != false)
+                if (checkOption(userOption, 1, 12, out number) != false)
                 {
                     //We should instantiate the class so we can go through the different Arrays methods
                     if (number == 1)
@@ -235,6 +237,63 @@ namespace LeetCode.src.TopInterviewQuestions
                         Console.WriteLine("Entering easy menu");
                         easyMenuFlag = true;
                     }
+                }
+            }
+        }
+
+        private static void easyStringMenu()
+        {
+            while (eMenuStringFlag)
+            {
+
+                string message = "\n\t1.Reverse String\n\t2.Reverse Integer\n\t3.First Unique Character in a String\n\t4.Valid Anagram\n\t5.Valid Palindrome\n\t6.String to integer\n" +
+                    "\t7.Implement strStr()\n\t8.Longest Common Prefix\n\t10.Back to Easy Menu";
+                Console.WriteLine(message);
+                Console.Write("\nOption ->");
+                string userOption = Console.ReadLine().ToString();
+                int number = 0;
+                checkOption(userOption, 1, 10, out number);
+                if (number == 1)
+                {
+
+                }
+                else if(number == 2)
+                {
+
+                }
+                else if (number == 3)
+                {
+                    FirstUniqueChar firstUniqueChar = new FirstUniqueChar();
+                    firstUniqueChar.FirstUniqChar("leetcode");
+                }
+                else if (number == 4)
+                {
+
+                }
+                else if (number == 5)
+                {
+
+                }
+                else if (number == 6)
+                {
+
+                }
+                else if (number == 7)
+                {
+
+                }
+                else if (number == 8)
+                {
+
+                }
+                else if (number == 9)
+                {
+
+                }
+                else if (number == 10)
+                {
+                    easyMenuFlag = false;
+                    eMenuStringFlag = false;
                 }
             }
         }
