@@ -255,7 +255,7 @@ namespace LeetCode.src.TopInterviewQuestions
                 checkOption(userOption, 1, 10, out number);
                 if (number == 1)
                 {
-
+                    
                 }
                 else if(number == 2)
                 {

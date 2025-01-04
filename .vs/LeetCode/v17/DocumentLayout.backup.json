@@ -3,6 +3,10 @@
   "WorkspaceRootPath": "C:\\Users\\David\\source\\repos\\LeetCode\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{A8BE3C06-9142-4E70-A97F-3B6C77DFC65F}|LeetCode.csproj|C:\\Users\\David\\source\\repos\\LeetCode\\src\\topinterviewquestions\\easy\\strings\\firstuniquechar.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A8BE3C06-9142-4E70-A97F-3B6C77DFC65F}|LeetCode.csproj|solutionrelative:src\\topinterviewquestions\\easy\\strings\\firstuniquechar.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{A8BE3C06-9142-4E70-A97F-3B6C77DFC65F}|LeetCode.csproj|c:\\users\\david\\source\\repos\\leetcode\\src\\topinterviewquestions\\mainprogram.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{A8BE3C06-9142-4E70-A97F-3B6C77DFC65F}|LeetCode.csproj|solutionrelative:src\\topinterviewquestions\\mainprogram.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
@@ -23,14 +27,27 @@
             {
               "$type": "Document",
               "DocumentIndex": 0,
+              "Title": "FirstUniqueChar.cs",
+              "DocumentMoniker": "C:\\Users\\David\\source\\repos\\LeetCode\\src\\TopInterviewQuestions\\Easy\\Strings\\FirstUniqueChar.cs",
+              "RelativeDocumentMoniker": "src\\TopInterviewQuestions\\Easy\\Strings\\FirstUniqueChar.cs",
+              "ToolTip": "C:\\Users\\David\\source\\repos\\LeetCode\\src\\TopInterviewQuestions\\Easy\\Strings\\FirstUniqueChar.cs",
+              "RelativeToolTip": "src\\TopInterviewQuestions\\Easy\\Strings\\FirstUniqueChar.cs",
+              "ViewState": "AgIAAAkAAAAAAAAAAAAgwA8AAAArAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-01-04T09:23:44.636Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
               "Title": "MainProgram.cs",
               "DocumentMoniker": "C:\\Users\\David\\source\\repos\\LeetCode\\src\\TopInterviewQuestions\\MainProgram.cs",
               "RelativeDocumentMoniker": "src\\TopInterviewQuestions\\MainProgram.cs",
               "ToolTip": "C:\\Users\\David\\source\\repos\\LeetCode\\src\\TopInterviewQuestions\\MainProgram.cs",
               "RelativeToolTip": "src\\TopInterviewQuestions\\MainProgram.cs",
-              "ViewState": "AgIAAE4AAAAAAAAAAAAuwF0AAAAVAAAAAAAAAA==",
+              "ViewState": "AgIAAPgAAAAAAAAAAAAAAAoBAAAUAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-30T10:55:16.381Z",
+              "WhenOpened": "2024-11-02T19:15:14.236Z",
               "EditorCaption": ""
             }
           ]

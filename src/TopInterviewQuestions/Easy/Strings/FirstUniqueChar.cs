@@ -28,8 +28,7 @@ namespace LeetCode.src.TopInterviewQuestions.Easy.Strings
                     else
                     {
                         charactersPosition.Add(character, iteration);
-                    }
-                    
+                    }                    
                 }
                 iteration++;
             }
