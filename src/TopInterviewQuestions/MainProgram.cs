@@ -264,7 +264,7 @@ namespace LeetCode.src.TopInterviewQuestions
                 else if (number == 3)
                 {
                     FirstUniqueChar firstUniqueChar = new FirstUniqueChar();
-                    firstUniqueChar.FirstUniqChar("leetcode");
+                    System.Console.WriteLine("The first non repeated character is in position: "+firstUniqueChar.FirstUniqChar("aaab"));
                 }
                 else if (number == 4)
                 {

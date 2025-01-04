@@ -10,19 +10,29 @@ namespace LeetCode.src.TopInterviewQuestions.Easy.Strings
     {
         public int FirstUniqChar(string s)
         {
-            Dictionary<int,string> seen = new Dictionary<int, string>();
-            //We have to find which is the first character that does not repeat
+            if (s.Length > Math.Pow(10, 5)) return -1;
+            //We have to find which is the first character that does not repeat, so we make a substring
             int iteration = 0;
+            Dictionary<Char,int> charactersPosition = new Dictionary<Char,int>();
             foreach (char character in s)
             {
-               string firstNonRepeated = s.Substring(iteration + 1);
-               iteration ++;
-               if (firstNonRepeated.Contains(character))
+                if (!charactersPosition.ContainsKey(character))
                 {
-                    return iteration;
-                } 
+                    //Make a substring for the following and already readed numbers
+                    string alreadyReaded = s.Substring(0, iteration);
+                    string firstNonRepeated = s.Substring(iteration + 1);
+                    if (!firstNonRepeated.Contains(character) && !alreadyReaded.Contains(character))
+                    {
+                        return iteration;
+                    }
+                    else
+                    {
+                        charactersPosition.Add(character, iteration);
+                    }
+                    
+                }
+                iteration++;
             }
-
             return -1;
         }
     }
