@@ -213,7 +213,10 @@ namespace LeetCode.src.TopInterviewQuestions
                     }
                     else if (number == 7)
                     {
-
+                        int[] nums1 = { 1,2,2,1};
+                        int[] nums2 = { 2, 2 };
+                        IntersectionOfTwoArraysII intersectionOfTwoArraysII = new IntersectionOfTwoArraysII();
+                        intersectionOfTwoArraysII.Intersect(nums1, nums2);
                     }
                     else if (number == 8)
                     {
