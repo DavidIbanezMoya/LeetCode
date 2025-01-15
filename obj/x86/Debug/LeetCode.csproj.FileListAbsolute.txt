@@ -11,3 +11,10 @@ C:\Users\David\Source\Repos\LeetCode\obj\x86\Debug\LeetCode.csproj.AssemblyRefer
 C:\Users\David\Source\Repos\LeetCode\obj\x86\Debug\LeetCode.csproj.CoreCompileInputs.cache
 C:\Users\David\Source\Repos\LeetCode\obj\x86\Debug\ConsoleApplication.exe
 C:\Users\David\Source\Repos\LeetCode\obj\x86\Debug\ConsoleApplication.pdb
+C:\Users\moya\Source\Repos\DavidIbanezMoya\LeetCode\bin\Debug\ConsoleApplication.exe.config
+C:\Users\moya\Source\Repos\DavidIbanezMoya\LeetCode\bin\Debug\ConsoleApplication.exe
+C:\Users\moya\Source\Repos\DavidIbanezMoya\LeetCode\bin\Debug\ConsoleApplication.pdb
+C:\Users\moya\Source\Repos\DavidIbanezMoya\LeetCode\obj\x86\Debug\LeetCode.csproj.AssemblyReference.cache
+C:\Users\moya\Source\Repos\DavidIbanezMoya\LeetCode\obj\x86\Debug\LeetCode.csproj.CoreCompileInputs.cache
+C:\Users\moya\Source\Repos\DavidIbanezMoya\LeetCode\obj\x86\Debug\ConsoleApplication.exe
+C:\Users\moya\Source\Repos\DavidIbanezMoya\LeetCode\obj\x86\Debug\ConsoleApplication.pdb
