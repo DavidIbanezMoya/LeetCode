@@ -258,7 +258,9 @@ namespace LeetCode.src.TopInterviewQuestions
                 checkOption(userOption, 1, 10, out number);
                 if (number == 1)
                 {
-                    
+                    ReverseString reverseString = new ReverseString();
+                    char[] letter = new char[] { 'A' };
+                    reverseString.ReverseStringFunction(letter);
                 }
                 else if(number == 2)
                 {
