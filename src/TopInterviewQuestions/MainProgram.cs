@@ -258,7 +258,7 @@ namespace LeetCode.src.TopInterviewQuestions
                 checkOption(userOption, 1, 10, out number);
                 if (number == 1)
                 {
-
+                    
                 }
                 else if(number == 2)
                 {
@@ -267,7 +267,7 @@ namespace LeetCode.src.TopInterviewQuestions
                 else if (number == 3)
                 {
                     FirstUniqueChar firstUniqueChar = new FirstUniqueChar();
-                    firstUniqueChar.FirstUniqChar("leetcode");
+                    System.Console.WriteLine("The first non repeated character is in position: "+firstUniqueChar.FirstUniqChar("aaab"));
                 }
                 else if (number == 4)
                 {

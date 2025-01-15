@@ -1,5 +1,12 @@
 ﻿################################################################################
+<<<<<<< HEAD
 # Diese .gitignore-Datei wurde von Microsoft(R) Visual Studio automatisch erstellt.
 ################################################################################
 
 .vs/
+=======
+# Este archivo .gitignore ha sido creado automáticamente por Microsoft(R) Visual Studio.
+################################################################################
+
+/.vs/LeetCode/FileContentIndex/6f3d6dba-3971-44a4-9020-84ca573daa55.vsidx
+>>>>>>> main
