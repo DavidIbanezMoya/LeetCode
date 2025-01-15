@@ -13,17 +13,17 @@ namespace LeetCode.src.TopInterviewQuestions.Easy.Array
     {
         public int[] Intersect(int[] nums1, int[] nums2)
         {
-            List<int> intersectedList = new List<int>(); 
-            Dictionary<int,int>dictionary = new Dictionary<int,int>();
+            List<int> intersectedList = new List<int>();
+            Dictionary<int, int> dictionary = new Dictionary<int, int>();
 
-            if (nums1.Length == 0 || nums2.Length ==0 || nums1.Length >= 1000 || nums2.Length >= 1000) { return new int[0]; }
+            if (nums1.Length == 0 || nums2.Length == 0 || nums1.Length >= 1000 || nums2.Length >= 1000) { return new int[0]; }
 
             //Need to keep track of those who may have the same number more than once
             for (int i = 0; i < nums1.Length; i++)
             {
                 dictionary.Add(i, nums1[i]);
             }
-            for (int i = 0; i< nums2.Length; i++)
+            for (int i = 0; i < nums2.Length; i++)
             {
                 if (dictionary.ContainsValue(nums2[i]))
                 {

@@ -440,13 +440,13 @@
   <ItemGroup>
     <Compile Include="src\TopInterviewQuestions\Easy\Array\BuyAndSellStock.cs" />
     <Compile Include="src\TopInterviewQuestions\Easy\Array\ContainsDuplicate.cs" />
-    <Compile Include="src\TopInterviewQuestions\Easy\Array\IntersectionOfTwoArraysII.cs" />
     <Compile Include="src\TopInterviewQuestions\Easy\Array\MainArray.cs" />
     <Compile Include="src\TopInterviewQuestions\Easy\Array\RemoveDuplicates.cs" />
     <Compile Include="src\TopInterviewQuestions\Easy\Array\RotateArray.cs" />
     <Compile Include="src\TopInterviewQuestions\Easy\Array\ValidSudoku.cs" />
     <Compile Include="src\TopInterviewQuestions\Easy\Strings\FirstUniqueChar.cs" />
     <Compile Include="src\TopInterviewQuestions\Easy\Strings\MainString.cs" />
+    <Compile Include="src\TopInterviewQuestions\Easy\Array\IntersectionOfTwoArraysII.cs" />
     <Compile Include="src\TopInterviewQuestions\MainProgram.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSHARP.Targets" />
